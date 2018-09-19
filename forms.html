@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Register With Us</title>
 </head>
-<body>
-$END$
-</body>
+    <body>
+        <form method="POST" action="http://http-inspector.glitch.me">
+            <h2>Veridian Dynamics Registration</h2>
+            <p>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+
+            <p>bio</p>
+                <textarea name="bio"></textarea>
+
+            <p>How did you hear about us?</p>
+                <label for="billboard">
+                    <input id="billboard" type="radio" name="question_1" value="billboard">
+                    Billboard
+                </label>
+                <label for="radio_ad">
+                    <input id="radio_ad" type="radio" name="question_1" value="radio_ad">
+                    Radio Advertisement
+                </label>
+                <label for="internet_ad">
+                    <input id="internet_ad" type="radio" name="question_1" value="internet_ad">
+                    Internet Advertisement
+                </label>
+                <label for="other">
+                    <input id="other" type="radio" name="question_1" value="other">
+                    Other
+                </label>
+
+            <p>
+                <label for="browserselect">What browser(s) do you use? Choose all that apply</label>
+                    <select id="browserselect" name="web_browser">
+                        <option value="chrome">Chrome</option>
+                        <option value="firefox">Firefox</option>
+                        <option value="safari">Safari</option>
+                        <option value="iexplorer">Internet Explorer</option>
+                    </select>
+            </p>
+        </form>
+    </body>
 </html>
