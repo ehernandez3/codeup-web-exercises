@@ -1,0 +1,77 @@
+
+/* selector for id="container" */
+#container {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+}
+
+/*  selector for all "h1" elements
+    that are a descendent of id="container"
+    and have a class of "fancy-header" */
+#container h1.fancy-header {
+    color: blue;
+    text-decoration: underline;
+
+}
+
+h1{
+    text-align: center;
+}
+
+header  {
+    color: orange;
+    text-decoration: underline;
+}
+
+body {
+    background-color: teal;
+    background-image: url("../img/mandalafull.jpg");
+    background-position: 50px 150px;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: square;
+}
+
+
+
+
+
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+td, tr {
+    padding: ;
+    font-size: ;
+}
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
