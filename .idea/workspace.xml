@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89fd4131-b5a1-4fd0-b1f5-e69451d7e5ce" name="Default Changelist" comment="Added stylesheet">
-      <change afterPath="$PROJECT_DIR$/Lecture Enviroment/positioning-lecture.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lecture Enviroment/positioning_LEC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/twitter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/twitter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS Intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/css intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +27,7 @@
         <counts>
           <entry key="Github Excersise" value="1" />
           <entry key="css" value="8" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="3" />
           <entry key="html" value="12" />
           <entry key="iml" value="1" />
           <entry key="rnc" value="1" />
@@ -44,7 +38,7 @@
           <entry key="CSS" value="8" />
           <entry key="HTML" value="12" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
@@ -222,7 +216,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537652167903" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537652652790" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -263,12 +257,12 @@
       <workItem from="1537307797352" duration="11000" />
       <workItem from="1537307851185" duration="42000" />
       <workItem from="1537307986634" duration="37118000" />
-      <workItem from="1537601317505" duration="4310000" />
+      <workItem from="1537601317505" duration="4951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59184000" />
+    <option name="totallyTimeSpent" value="59825000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,16 +275,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50076103" side_tool="true" weight="0.11843712" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49923897" visible="true" weight="0.10330138" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49923897" visible="true" weight="0.10330138" />
       <window_info id="Structure" order="6" sideWeight="0.50076103" side_tool="true" weight="0.11843712" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.28584072" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.28584072" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
