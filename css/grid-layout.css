@@ -8,6 +8,10 @@
     }
 }
 
+html, body, * {
+    box-sizing: border-box;
+}
+
 /* CSS */
 .container {
     margin: 0 auto;
@@ -26,11 +30,11 @@
 
 }
 
-/*.row:after {*/
-    /*content: "";*/
-    /*display: table;*/
-    /*clear: both;*/
-/*}*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .column {
     float: left;
@@ -40,15 +44,20 @@
     background: rgb(225 225 225);
     margin-bottom: 20px;
 }
-.column.one-third {
-    width: 33.33%;
 
-}
 .column.one-half {
     width: 50%;
 }
+.column.one-third {
+    width: 33.33%;
+}
+
 .column.one-fourth {
     width: 25%;
+}
+
+.column.one-sixth {
+
 }
 .column.one-eighth {
     width: 12.5%;
