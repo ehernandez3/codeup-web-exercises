@@ -2,7 +2,7 @@ secret.txt
 .idea/*
 /.idea/
 *.iml
-.idea/worskpace.xml
+.idea/workspace.xml
 /lecture-enviroment/
 lecture-enviroment/
 /lecture-enviroment/*
