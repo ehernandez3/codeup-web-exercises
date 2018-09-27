@@ -1,0 +1,81 @@
+/*.container-fluid {*/
+    /*padding: 0;*/
+    /*marging 0 auto;*/
+    /*width: 100%;*/
+/*}*/
+/*.display-4 {*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*h1 {*/
+    /*text-align: center*/
+    /*width: 100%;*/
+    /*!*margin: 0 auto;*!*/
+    /*position:absolute;*/
+    /*z-index: 1;*/
+/*}*/
+
+/*.jumbotron {*/
+    /*padding: 0;*/
+    /*width: 100%;*/
+    /*!*margin: 0 auto;*!*/
+    /*position:absolute;*/
+    /*z-index: 2;*/
+/*}*/
+
+footer {
+    padding: 15px;
+    background: rgb(247	247	247);
+}
+
+/*.card {*/
+    /*!*margin-bottom: 5px;*!*/
+/*}*/
+
+/*.inner-card {*/
+    /*border: 1px solid lightgrey;*/
+    /*margin: 10px 10px 0px 10px;*/
+/*}*/
+
+/*.list-group {*/
+    /*border: 1px solid lightgrey;*/
+    /*margin: 0px 10px 10px 10px;*/
+/*}*/
+
+/*.jumbotron {*/
+    /*background-image: url("../img/pizza.png");*/
+    /*background-size: cover;*/
+    /*height: 300px;*/
+    /*text-align: center;*/
+    /*margin-top: 10px;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.jumbotron h1 {*/
+/*background-color: #fff;*/
+/*background-color: rgba(255,255,255,0.5);*/
+/*margin-top: 30px;*/
+/*margin-left: 0;*/
+/*margin-right: 0;*/
+/*width: 100%;*/
+/*}*/
+
+.btn {
+    float: right;
+
+}
+
+.pizza-img {
+    background-image: url("../img/pizza.png");
+
+}
+
+.pizza-img h1 {
+    opacity: .7;
+}
+/*background-color: #fff;*/
+/*background-color: rgba(255,255,255,0.5);*/
+/*margin-top: 30px;*/
+/*margin-left: 0;*/
+/*margin-right: 0;*/
+/*width: 100%;*/
