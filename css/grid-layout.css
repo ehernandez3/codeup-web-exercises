@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
     .column.one-third,
     .column.one-half,
+    .column.two-thirds,
     .column.one-fourth,
     .column.one-eighth
     {
@@ -8,9 +9,9 @@
     }
 }
 
-html, body, * {
-    box-sizing: border-box;
-}
+/*html, body, * {*/
+    /*box-sizing: border-box;*/
+/*}*/
 
 /* CSS */
 .container {
@@ -40,8 +41,8 @@ html, body, * {
     float: left;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid black;
-    background: rgb(225 225 225);
+    /*border: 1px solid black;*/
+    /*background: rgb(225 225 225);*/
     margin-bottom: 20px;
 }
 
@@ -61,4 +62,8 @@ html, body, * {
 }
 .column.one-eighth {
     width: 12.5%;
+}
+
+.column.two-third {
+    width: 66.66%;
 }
