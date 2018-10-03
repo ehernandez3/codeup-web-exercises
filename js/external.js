@@ -57,4 +57,30 @@
 
 
 //------------------------3c------------------------------
-var classEnroll =
+// var classIsNotFull = confirm("Confirm that the class is not full");
+// var classSchedulesCheck = confirm("Confirm that the schedules check ");
+
+
+
+//------------------------3d------------------------------
+
+//-----This-----
+// var numberOfItemsForDiscount = prompt("How many items must be bought for discount?");
+// var numberOfItems = prompt("How many items were bought?");
+// var offerIsNotExpired = confirm("Confirm offer has not expired.");
+// var isPremiumMember = confirm("Customer is a premium membr");
+//
+// var productDiscountIsApplied = isPremiumMember || (numberOfItems > numberOfItemsForDiscount && offerIsNotExpired);
+//
+//     alert("Product discount applied: " + productDiscountIsApplied);
+
+//-----or this-----
+
+var discountBreakPoint = 2;
+var numberOfItems = prompt("How many items were bought?");
+var offerIsNotExpired = confirm("Confirm offer has not expired.");
+var isPremiumMember = confirm("Customer is a premium membr");
+
+var productDiscountIsApplied = offerIsNotExpired && (isPremiumMember || numberOfItems >= discountBreakPoint);
+
+    alert("Product discount applied: " + productDiscountIsApplied);
