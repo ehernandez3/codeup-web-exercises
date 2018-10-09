@@ -20,39 +20,37 @@
 
 var enterNumQuestion = confirm("Would you like to enter a number?");
 
+
+
 if (enterNumQuestion) {
     var enterNum = prompt("Enter your number:");
     // console.log(typeof enterNum);
     enterNum = Number(enterNum);
 
-    var evenNum = (enterNum % 2 == 0);
-    if (evenNum){
-        alert("You entered an even number");
-    } else {
-        alert("You entered an odd number");
-    }
-    alert("100 more than " + enterNum + " is " + (enterNum + 100));
-    if (enterNum >= 0) {
-        alert(enterNum + " is a positive number.");
-    } else {
-        alert(enterNum + " is a negative number.");
-    }
+    // if (!==enterNum) {
+    //     var notNum;
+    //     alert('"' + enterNum + '"' + 'is not a number.');
+    // }
 
+    var evenNum = (enterNum % 2 == 0);
+    if (== enterNum) {
+        alert(enterNum + " is not a number.");
+    } else if (evenNum) {
+            alert("You entered an even number");
+        } else {
+            alert("You entered an odd number");
+        }
+
+        alert("100 more than " + enterNum + " is " + (enterNum + 100));
+
+        if (enterNum >= 0) {
+            alert(enterNum + " is a positive number.");
+        } else {
+            alert(enterNum + " is a negative number.");
+        }
+    }
 }
 
-
-
-
-
-//     if (enterANumber % 2 == 0) {
-//
-//     var result = "You entered an even number";
-//     alert(result);
-// } else {
-//     var result = "You entered an odd number";
-//     alert(result);
-// }
-// }
 
 
 
