@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 //----------------For Loops-----------------------
 
 //   1.    Create a file named for_loops.js inside the js directory and link it to your loops.html file.
@@ -29,6 +31,14 @@
 //         }
 //         showMultiplicationTable(9);
 
+//---------------------- Ryan's Solution -----------------------
+
+// function showMultiplicationTable(number) {
+//     for (var i = 1; i <= 10; i++) {
+//         console.log(number + " x " + i + " = " + (number * i));
+//     }
+// }
+//     showMultiplicationTable(7);
 
 //
 //
@@ -46,6 +56,25 @@
 // var range = [min, max];
 //     for (range.push(Math.floor(Math.random() * (max - min + 1)); randomNum
 // }
+
+//---------------------- Ryan's Solution -----------------------
+
+// function isEven(num) {
+//     return num % 2 === 0;
+// }
+//
+// var randomNumber;
+// for (var i = 0; i < 10; i++) {
+//     randomNumber = Math.floor(Math.random() * 180) + 20;
+//
+//     if(isEven(randomNumber)) {
+//         console.log (randomNumber + " is even!");
+//     } else {
+//         console.log (randomNumber + " is odd!");
+//     }
+// }
+
+
 
 // var allCones = Math.floor(Math.random() * 100) + 100;
 // for (var i = 10; i < 200; i++) {
@@ -75,9 +104,40 @@
 // 88888888
 // 999999999
 
-for (var i = 1; i <= 9; i += 1 + toString(i)) {
-    console.log("" + i);
-}
+// for (var i = 1; i <= 9; i += 1 + toString(i)) {
+//     console.log("" + i);
+// }
+
+// var num = "";
+// for (var i = 1; i<=9; i++)
+// { for (var j = 2; j <= 9; j++) {
+//
+// }
+//     num = num + i + j;
+//     console.log(num);
+// }
+
+//---------------------- Ryan's Solution -----------------------
+
+// for (var i = 1; i <= 9; i++) {
+//     i = i.toString()
+//     console.log(i.repeat(i));
+// }
+
+//------------------------- OR --------------------------------
+
+// var output = "";
+// for (var i = 1; i <= 9; i++) {
+//     output = "";
+//     for (var j = 1; j <= i; j++) {
+//         output += i;
+//     }
+//     console.log(output);
+// }
+
+
+
+
 
 // Create a for loop that uses console.log to create the output shown below.
 //
@@ -102,38 +162,14 @@ for (var i = 1; i <= 9; i += 1 + toString(i)) {
 // 15
 // 10
 // 5
-// Break and Continue
-//
-// Create a file named break_and_continue.js in the js directory.
-//     Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
-//     Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-//     Your output should look like this:
-//
-//
-// Number to skip is: 27
-//
-// Here is an odd number: 1
-// Here is an odd number: 3
-// Here is an odd number: 5
-// Here is an odd number: 7
-// Here is an odd number: 9
-// Here is an odd number: 11
-// Here is an odd number: 13
-// Here is an odd number: 15
-// Here is an odd number: 17
-// Here is an odd number: 19
-// Here is an odd number: 21
-// Here is an odd number: 23
-// Here is an odd number: 25
-// Yikes! Skipping number: 27
-// Here is an odd number: 29
-// Here is an odd number: 31
-// Here is an odd number: 33
-// Here is an odd number: 35
-// Here is an odd number: 37
-// Here is an odd number: 39
-// Here is an odd number: 41
-// Here is an odd number: 43
-// Here is an odd number: 45
-// Here is an odd number: 47
-// Here is an odd number: 49
+
+// for (var i = 100; i >= 5; i -= 5) {
+//     console.log(i);
+// }
+
+//---------------------- Ryan's Solution -----------------------
+//                        Same as above
+
+
+
+
