@@ -8,30 +8,71 @@
      */
 
     var names = ["Bob", "Susan", "Mary", "Phil"];
-        console.log(names);
 
+//-------------------------------------------Ryan-Start------------------------
+
+    // var names = ["Bob",
+    //     "Susan",
+    //     "Mary",
+    //     "Phil"
+    // ];
+
+//-------------------------------------------Ryan-End--------------------------
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+        // console.log(names.length);
+
+//-------------------------------------------Ryan-Start------------------------
+
+    // console.log("names.length);
+
+//-------------------------------------------Ryan-End--------------------------
 
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-
+        // console.log(names[0]);
+        // console.log(names[1]);
+        // console.log(names[2]);
+        // console.log(names[3]);
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
 
+    //     for (var i = 0; i < names.length; i += 1) {
+    //         console.log(names[i]);
+    //     }
+    //
+    //
+    // for (var i = 0; i < names.length; i++) {
+    //     console.log(names[i]);
+    // }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+
+
+
+//-------------------------------------------Ryan-Start------------------------
+
+    names.forEach(function (name) {
+        console.log(name);
+    });a
+
+//-------------------------------------------Ryan-End--------------------------
+
+
+
 
     /**
      * TODO:
@@ -46,5 +87,30 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+//-------------------------------------------Ryan-Start------------------------
+
+    function first(array) {
+        return array[0];
+    }
+
+    function second(array) {
+        return array[1];
+    }
+    function last(array) {
+        return array[array.length -1];
+    }
+    function secondToLast(array) {
+        return array[array.length -2];
+    }
+
+//-------------------------------------------Ryan-End--------------------------
+
+
+    var ticTacToe = [
+        [0, 1, 2],
+        [0, 1, 2],
+        [0, 1, 2]
+    ];
 
 })();
