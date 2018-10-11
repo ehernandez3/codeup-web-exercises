@@ -20,7 +20,7 @@
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
 
-    planets.unshift("Sun");
+    planets.unshift("The Sun");
     console.log(planets);
 
 
