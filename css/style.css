@@ -9,26 +9,38 @@
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */
-#container h1.fancy-header {
-    color: blue;
-    text-decoration: underline;
+/*#container h1.fancy-header {*/
+     /*color: blue;*/
+     /*text-decoration: underline;*/
+ /*}*/
 
-}
 
-h1{
+
+h1.fancy-header{
     text-align: center;
+    color: purple; /* single line comment */
+    text-decoration: underline;
 }
+
+
+h3{
+    text-decoration: underline;
+    color: blue;
+}
+
 
 header  {
-    color: orange;
+    color: royalblue;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 body {
     background-color: teal;
-    background-image: url("../img/mandalafull.jpg");
+    background-image: url("../img/abstract-background-black-and-white-935871.jpg");
     background-position: 50px 150px;
-    font-family: sans-serif;
+
+    font-family: 'Rubik', sans-serif;
 }
 
 ul {
@@ -40,10 +52,10 @@ ul {
 
 
 
-.fancy-header {
-    color: purple; /* single line comment */
-    text-decoration: underline;
-}
+/*.fancy-header {*/
+    /*color: purple; !* single line comment *!*/
+    /*text-decoration: underline;*/
+/*}*/
 
 
 
@@ -51,9 +63,9 @@ ul {
 
 
 
-td, tr {
-    padding: ;
-    font-size: ;
+tr, td {
+    padding: 8px;
+    font-size: 18px;
 }
 
 /* unvisited link (:link) */
