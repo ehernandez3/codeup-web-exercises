@@ -47,6 +47,14 @@
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
+        var listArray = Array.from (listItems);
+
+        listArray.forEach(function (listItem, index) {
+            if (index % 2 === 0) {
+                listItem.style.color = 'grey';
+            }
+        });
+
         // TODO: Set text color of li with dbid = 1 to blue
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
