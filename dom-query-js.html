@@ -29,6 +29,7 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
+
         var mainHeader = document.getElementById('main-header');
         console.log(mainHeader);
 
@@ -36,8 +37,17 @@
         mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById('sub-header');
+
+        // var subHeader = document.getElementById('sub-header');
+        // console.log(subHeader);
+
+        //-------------------------Justin--------------------
+        //----------------------same as above and below-------
+
+        var subHeader = document.querySelector('#sub-header');
         console.log(subHeader);
+
+        //-------------------------END-----------------------
 
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = 'blue';
@@ -47,20 +57,53 @@
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
-        var listArray = Array.from (listItems);
 
-        listArray.forEach(function (listItem, index) {
-            if (index % 2 === 0) {
-                listItem.style.color = 'grey';
-            }
-        });
+        // var listArray = Array.from (listItems);
+        //
+        // listArray.forEach(function (listItem, index) {
+        //     if (index % 2 === 0) {
+        //         listItem.style.color = 'grey';
+        //     }
+        // });
+
+        //--------------------JUSTIN solution for item to grey and dbid 1 to blue
+
+        for (var i = 0; i < listItems.length; i += 1) {
+            console.log(listItems[i].getAttribute("data-dbid"));
+
+            if (listItems[i].getAttribute("data-dbid") === "1") {
+                listItems[i].style.color = "blue";
+            } else if (i % 2 === 0) {
+                        listItems[i].style.color = 'grey';
+                    }
+        }
 
         // TODO: Set text color of li with dbid = 1 to blue
+        // var dbid = listArray[0].getAttribute('data-dbid');
+        //
+        // listArray.forEach(function(dbid, index){
+        //     if (index === 0) {
+        //         dbid.style.color = 'blue';
+        //     }
+        // });
+
+
+
+
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
+        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+        subParagraphs[0].innerHTML = "Mission Accomplished!";
+
+        //----------------------JUSTIN----------------------------
+
+        subParagraphs[0].innertext = "Mission Accomplished!";
+
     })();
 </script>
 </body>
