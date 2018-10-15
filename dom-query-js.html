@@ -42,7 +42,7 @@
 
         // mainHeader.innerHTML = "JavaScript is Cool";
 
-        //Using Button
+//===============Button 1 changes main header to 'JavaScript is Cool'====================//
 
         var mainHeader = document.getElementById('main-header');
         var btn1 = document.getElementById("btn1");
@@ -56,20 +56,33 @@
         // var subHeader = document.getElementById('sub-header');
         // console.log(subHeader);
 
-        //-------------------------Justin--------------------
-        //----------------------same as above and below-------
+//------------------------------Justin------------------------------------//
+//----------------------same as above and below---------------------------//
 
-        var subHeader = document.querySelector('#sub-header');
-        console.log(subHeader);
+        // var subHeader = document.querySelector('#sub-header');
+        // console.log(subHeader);
 
-        //-------------------------END-----------------------
+//------------------------------Justin END--------------------------------//
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
+        // subHeader.style.color = 'blue';
+
+//====================Button 2 changes sub-header color to blue=========================//
+
+        var subHeader = document.getElementById('sub-header');
+        var btn2 = document.getElementById("btn2");
+
+        btn2.addEventListener('click', function () {
+            subHeader.style.color = 'blue';
+        });
+
+//================================Button 2 END==========================================//
+
+
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
-        console.log(listItems);
+        // var listItems = document.getElementsByTagName('li');
+        // console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
 
@@ -83,15 +96,17 @@
 
         //--------------------JUSTIN solution for item to grey and dbid 1 to blue
 
-        for (var i = 0; i < listItems.length; i += 1) {
-            console.log(listItems[i].getAttribute("data-dbid"));
+        // for (var i = 0; i < listItems.length; i += 1) {
+        //     console.log(listItems[i].getAttribute("data-dbid"));
+        //
+        //     if (listItems[i].getAttribute("data-dbid") === "1") {
+        //         listItems[i].style.color = "blue";
+        //     } else if (i % 2 === 0) {
+        //                 listItems[i].style.color = 'grey';
+        //             }
+        // }
 
-            if (listItems[i].getAttribute("data-dbid") === "1") {
-                listItems[i].style.color = "blue";
-            } else if (i % 2 === 0) {
-                        listItems[i].style.color = 'grey';
-                    }
-        }
+
 
         // TODO: Set text color of li with dbid = 1 to blue
         // var dbid = listArray[0].getAttribute('data-dbid');
@@ -102,8 +117,23 @@
         //     }
         // });
 
+//==============Button 3 changes change every other list item to grey and dbid 1 to blue====================//
 
+        var listItems = document.getElementsByTagName('li');
 
+        btn3.addEventListener('click', function () {
+            for (var i = 0; i < listItems.length; i += 1) {
+                console.log(listItems[i].getAttribute("data-dbid"));
+
+                if (listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = "blue";
+                } else if (i % 2 === 0) {
+                    listItems[i].style.color = 'grey';
+                }
+            }
+        });
+
+//==========================================Button 3 END====================================================//
 
 
 
