@@ -9,7 +9,7 @@
 		<h1 id="main-header" class="codeup">jQuery Intro</h1>
 			</div>
 				<div id="d1" class="div-content">
-					<p id="p1" class="codeup">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					<p id="p1" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
@@ -26,9 +26,9 @@
 				</div>
 				<div>
 					<ul id="list" class="fruit-list">
-						<li id="listItem1">Apple</li>
-						<li id="listItem2">Orange</li>
-						<li id="listItem3">Banana</li>
+						<li id="listItem1" class="listItems">Apple</li>
+						<li id="listItem2" class="listItems">Orange</li>
+						<li id="listItem3" class="listItems">Banana</li>
 					</ul>
 				</div>
 <script src="js/jquery-2.2.4.min.js"></script>
@@ -40,7 +40,17 @@
 
 	});
 
-	var redBorder = $(".codeup")
+	var largerListItems = $(".listItems").css({
+		"font-size": "20px"
+	});
+
+	var highlight = $("")
+
+	// var redBorder = $(".codeup").css({
+	// 	"border-color": "red",
+    //     "border-width":"1px",
+    //     "border-style":"solid"});
+
 
 	// var contents = $("#d1").html();
 	// 	alert(contents);
