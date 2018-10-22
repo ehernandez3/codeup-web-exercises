@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        "use strict";
+
+        $(function () {
+
+            $(document).keyup(function(event) {
+                console.log(event.keyCode);
+
+            });
+
+
+            var global = {
+
+                konami: function() {
+                    var konamikeys = [38,38,40,40,37,39,37,39,66,65,13],
+                        started = false,
+                        count = 0;
+
+                    $(document).keydown(function(e){
+                        var reset = function() {
+                            started = false;
+                            count = 0;
+                            return;
+                        };
+
+                        var key = e.keyCode;
+
+                        // Begin watching if first key in sequence was pressed.
+                        if(!started){
+                            if(key == 38){
+                                started = true;
+                            }
+                        }
+
+                        // If we've started, pay attention to key presses, looking for right sequence.
+                        if (started){
+
+                            if (konamikeys[count] == key){
+                                count++;
+                            } else {
+                                // Incorrect key, restart.
+                                reset();
+                            }
+                            if (count == 11){
+                                // Success!
+                                $('body').css('background-image', 'url("img/Mario-Bros-Wallpaper-Desktop.jpg');
+                                alert('You have added 30 lives!');
+                                reset();
+                            }
+                        } else {
+                            reset();
+                        }
+                    });
+                }
+            };
+
+            global.konami();
+
+
+
+            // $(document).keydown(function(e) {
+            //
+            //     if (e.event.keyCode === "38" + "38" + "40" + "40" + "37" + "39" + "37" + "39" + "66" + "65" + "13") {
+            //         alert('You have added 30 lives!')
+            //         // e.preventDefault();
+            //     }
+            // });
+
+            //↑   ↑   ↓   ↓   ←   →   ←   →   b   a  enter
+            //38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13
+        });
+    </script>
+</body>
+</html>
