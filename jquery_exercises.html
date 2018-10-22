@@ -53,9 +53,9 @@
 	// 	"font-size": "20px"
 	// });
 	//
-    var highlight = $("h1, p, li").css({
-        "background-color": "#FFFF00"
-    });
+    // var highlight = $("h1, p, li").css({
+    //     "background-color": "#FFFF00"
+    // });
 	//
     // var headerAlert = $("#main-header").html();
     // 	alert(headerAlert);
@@ -67,13 +67,13 @@
 
 
 		//ELEMENT SELECTORS...
-		$('li').css('font-size', '20px');
+		// $('li').css('font-size', '20px');
 
         // $("h1").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
         // $("p").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
         // $("li").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
 
-        $("h1, p, li").css('background', 'yellow'); // ALL ELEMENTS IN ONE LINE OF CODE
+        // $("h1, p, li").css('background', 'yellow'); // ALL ELEMENTS IN ONE LINE OF CODE
 
 
 	// var highlightHeader = $("h1").css({
@@ -99,6 +99,24 @@
 
 	// var contents = $("#d1").html();
 	// 	alert(contents);
+
+//=================MOUSE EVENTS EXERCISE=======================
+        $('h1').click(function() {
+			$(this).css('background', '#06AFEA');
+        });
+
+        $('p').dblclick(function() {
+            $(this).css('font-size', '18px');
+        });
+
+        $('li').hover(
+            function() {
+            	$(this).css('color', 'red');
+        	},
+        	function f() {
+				$(this).css('color', 'black');
+            }
+        	);
 
     });
 
