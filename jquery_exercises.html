@@ -5,39 +5,104 @@
 	<title>jQuery Intro</title>
 </head>
 <body>
-	<h1>jQuery Intro</h1>
-		<div>
-			<p id="" class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-				aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-				culpa qui officia deserunt mollit anim id est laborum
-			</p>
-		</div>
-		<div>
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-				et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-				aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-				culpa qui officia deserunt mollit anim id est laborum
-			</p>
-		</div>
-		<ul>
-			<li>Apple</li>
-			<li>Orange</li>
-			<li>Banana</li>
-		</ul>
-
+	<div id="header-id">
+		<h1 id="main-header" class="codeup">jQuery Intro</h1>
+			</div>
+				<div id="d1" class="div-content">
+					<h3 class="title">Content</h3>
+					<p id="p1" class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						culpa qui officia deserunt mollit anim id est laborum
+					</p>
+				</div>
+				<div id="d2" class="codeup">
+					<p id="p2" class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						culpa qui officia deserunt mollit anim id est laborum
+					</p>
+				</div>
+					<h3 class="title codeup">Sub-Heading</h3>
+					<ul id="list" class="fruit-list">
+						<li id="listItem1" class="listItems">Apple</li>
+						<li id="listItem2" class="listItems">Orange</li>
+						<li id="listItem3" class="listItems">Banana</li>
+					</ul>
+				</div>
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
 	"use strict";
 
-	$(document).ready(function () {
-		console.log('doc', $(document));
-		alert("All done bro!")
+//===========Use This
+// 	$(function () {
+//
+//     });
+
+//============OR This
+// 	$(document).ready(function () {
+// 		console.log('doc', $(document));
+//
+// 	});
+
+    $(function () {
+
+	// var largerListItems = $(".listItems").css({
+	// 	"font-size": "20px"
+	// });
+	//
+    var highlight = $("h1, p, li").css({
+        "background-color": "#FFFF00"
+    });
+	//
+    // var headerAlert = $("#main-header").html();
+    // 	alert(headerAlert);
+
+    	// CLASS SELECTORS...
+
+		// $('.codeup').css("border", "1px solid red")
 
 
-	});
+
+		//ELEMENT SELECTORS...
+		$('li').css('font-size', '20px');
+
+        // $("h1").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
+        // $("p").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
+        // $("li").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
+
+        $("h1, p, li").css('background', 'yellow'); // ALL ELEMENTS IN ONE LINE OF CODE
+
+
+	// var highlightHeader = $("h1").css({
+    //     "background-color": "#FFFF00"
+	// });
+	//
+    // var highlightParagraphs = $("p").css({
+    //     "background-color": "#FFFF00"
+    // });
+	//
+    // var highlightListItems = $("li").css({
+    //     "background-color": "#FFFF00"
+    // });
+
+
+
+
+	// var redBorder = $(".codeup").css({
+	// 	"border-color": "red",
+    //     "border-width":"1px",
+    //     "border-style":"solid"});
+
+
+	// var contents = $("#d1").html();
+	// 	alert(contents);
+
+    });
+
+
 </script>
 
 </body>
