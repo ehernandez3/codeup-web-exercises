@@ -9,7 +9,8 @@
 		<h1 id="main-header" class="codeup">jQuery Intro</h1>
 			</div>
 				<div id="d1" class="div-content">
-					<p id="p1" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					<h3 class="title">Content</h3>
+					<p id="p1" class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
@@ -17,14 +18,14 @@
 					</p>
 				</div>
 				<div id="d2" class="div-content">
-					<p id="p2" class="codeup">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					<p id="p2" class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 						culpa qui officia deserunt mollit anim id est laborum
 					</p>
 				</div>
-				<div>
+					<h3 class="title">Sub-Heading</h3>
 					<ul id="list" class="fruit-list">
 						<li id="listItem1" class="listItems">Apple</li>
 						<li id="listItem2" class="listItems">Orange</li>
@@ -35,16 +36,44 @@
 <script>
 	"use strict";
 
-	$(document).ready(function () {
-		console.log('doc', $(document));
+//===========Use This
+// 	$(function () {
+//
+//     });
 
-	});
+//============OR This
+// 	$(document).ready(function () {
+// 		console.log('doc', $(document));
+//
+// 	});
+
+    $(function () {
 
 	var largerListItems = $(".listItems").css({
 		"font-size": "20px"
 	});
 
-	var highlight = $("")
+    var highlight = $("h1, p, li").css({
+        "background-color": "#FFFF00"
+    });
+
+    var headerAlert = $("#main-header").html();
+    	alert(headerAlert);
+
+	// var highlightHeader = $("h1").css({
+    //     "background-color": "#FFFF00"
+	// });
+	//
+    // var highlightParagraphs = $("p").css({
+    //     "background-color": "#FFFF00"
+    // });
+	//
+    // var highlightListItems = $("li").css({
+    //     "background-color": "#FFFF00"
+    // });
+
+
+
 
 	// var redBorder = $(".codeup").css({
 	// 	"border-color": "red",
@@ -54,6 +83,8 @@
 
 	// var contents = $("#d1").html();
 	// 	alert(contents);
+
+    });
 
 
 </script>
