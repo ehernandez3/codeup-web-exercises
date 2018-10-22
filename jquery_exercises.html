@@ -17,7 +17,7 @@
 						culpa qui officia deserunt mollit anim id est laborum
 					</p>
 				</div>
-				<div id="d2" class="div-content">
+				<div id="d2" class="codeup">
 					<p id="p2" class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 						et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 						aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -25,7 +25,7 @@
 						culpa qui officia deserunt mollit anim id est laborum
 					</p>
 				</div>
-					<h3 class="title">Sub-Heading</h3>
+					<h3 class="title codeup">Sub-Heading</h3>
 					<ul id="list" class="fruit-list">
 						<li id="listItem1" class="listItems">Apple</li>
 						<li id="listItem2" class="listItems">Orange</li>
@@ -49,16 +49,32 @@
 
     $(function () {
 
-	var largerListItems = $(".listItems").css({
-		"font-size": "20px"
-	});
-
+	// var largerListItems = $(".listItems").css({
+	// 	"font-size": "20px"
+	// });
+	//
     var highlight = $("h1, p, li").css({
         "background-color": "#FFFF00"
     });
+	//
+    // var headerAlert = $("#main-header").html();
+    // 	alert(headerAlert);
 
-    var headerAlert = $("#main-header").html();
-    	alert(headerAlert);
+    	// CLASS SELECTORS...
+
+		// $('.codeup').css("border", "1px solid red")
+
+
+
+		//ELEMENT SELECTORS...
+		$('li').css('font-size', '20px');
+
+        // $("h1").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
+        // $("p").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
+        // $("li").css('background', 'yellow'); // INDIVIDUALLY TARGETED ELEMENTS
+
+        $("h1, p, li").css('background', 'yellow'); // ALL ELEMENTS IN ONE LINE OF CODE
+
 
 	// var highlightHeader = $("h1").css({
     //     "background-color": "#FFFF00"
