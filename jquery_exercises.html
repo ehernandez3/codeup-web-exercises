@@ -101,8 +101,27 @@
 	// 	alert(contents);
 
 //=================MOUSE EVENTS EXERCISE=======================
+//         $('h1').click(function() {
+// 			$(this).css('background', '#06AFEA');
+//         });
+//
+//         $('p').dblclick(function() {
+//             $(this).css('font-size', '18px');
+//         });
+//
+//         $('li').hover(
+//             function() {
+//             	$(this).css('color', 'red');
+//         	},
+//         	function f() {
+// 				$(this).css('color', 'black');
+//             }
+//         	);
+
+
+//=================== INSTRUCTOR SOLUTION =========================
         $('h1').click(function() {
-			$(this).css('background', '#06AFEA');
+            $(this).css('background-color', 'blue');
         });
 
         $('p').dblclick(function() {
@@ -111,12 +130,13 @@
 
         $('li').hover(
             function() {
-            	$(this).css('color', 'red');
-        	},
-        	function f() {
-				$(this).css('color', 'black');
+                $(this).css('color', 'red');
+            },
+            function f() {
+                $(this).css('color', 'black');
             }
-        	);
+        );
+//================== INSTRUCTOR SOLUTION END ========================
 
     });
 

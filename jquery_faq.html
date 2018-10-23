@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribut Method Exercise</title>
+    <style>
+        .invisible {
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Attribute Method Exercise</h1>
+        <dl>
+            <lh>Facts About Our National Parks</lh>
+                <dt>Yellowstone National Park
+                    <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
+                        was founded in 1916 when President Woodrow Wilson signed the Organic Act. However,
+                        the first national park was created many years earlier, when Congress passed an act
+                        establishing Yellowstone National Park in 1872.
+                <dt>Great Smoky Mountains</dt>
+                    <dd class="invisible">Most visited national park, drawing more than 10 million recreational visits each year.
+                <dt>Crater Lake National Park
+                    <dd class="invisible">Home to America’s deepest lake. It’s 1,943 feet deep, enough to hide 1.5 Empire State Buildings, and holds 4.6 trillion gallons of water.
+                <dt>Term
+                    <dd class="invisible">definition
+                <dt>Term
+                    <dd class="invisible">definition
+                <dt>Term
+                    <dd class="invisible">definition
+                <dt>Term
+                    <dd class="invisible">definition
+                <dt>Term
+                    <dd class="invisible">definition
+                <dt>Term
+                    <dd class="invisible">definition
+                <dt>Term
+                    <dd class="invisible">definition
+        </dl>
+    <button id="answer-btn">Toggle Answers</button>
+
+
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            "use strict";
+
+            $('#answer-btn').click(function () {
+                $('dd').toggleClass('invisible');
+            });
+
+
+
+            // Bonus
+
+            $('dt').click(function () {
+                $(this).css('background', 'yellow')
+            });
+
+
+
+
+
+
+
+        $(function () {
+
+        $('invisible').css('display', 'none');
+
+
+        });
+
+        });
+
+
+    </script>
+</body>
+</html>
