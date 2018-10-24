@@ -11,6 +11,8 @@
 </head>
 <body>
 
+    <div>jlkfjlkajfdklja</div>
+
     <h1>National Park Facts</h1>
         <dl>
             <lh>Facts About Our National Parks</lh>
@@ -43,7 +45,7 @@
         <button id="answer-btn">Toggle Answers</button>
 
     <!--==============LISTS===================-->
-    <h3 id="arches">Arches National Park</h3>
+    <h3>Arches National Park</h3>
         <ul>
             <li>President Wilson originally established the park as Sieur de Monts National Monument.</li>
             <li>There are a total of 26 mountains in Acadia National Park.</li>
@@ -51,7 +53,7 @@
             <li>There used to be mountain lions and gray wolves in the park but they have since left the area.</li>
         </ul>
 
-    <h3 id="carslbad">Carlsbad Caverns National Park</h3>
+    <h3>Carlsbad Caverns National Park</h3>
         <ul>
             <li>In 1903 mining began in Carlsbad Cavern for guano. The cave was known at the time as 'Bat Cave,' or
                 'Big Cave.'</li>
@@ -63,7 +65,7 @@
                 These include the bones from giant sloths, camels, lions, and jaguars.</li>
         </ul>
 
-    <h3 id="mammoth">Mammoth Cave National Park</h3>
+    <h3>Mammoth Cave National Park</h3>
         <ul>
             <li>The caves system of Mammoth Cave National Park began to form more than 280 million years ago. The
                 earth rose and twisted and allowed water to erode the rock into the current cave system.</li>
@@ -111,21 +113,15 @@
 
 <!--========== FUNCTION FOR LI BOLDING==========-->
 
-            // $('#arches').click(function () {
-            //     $(this).click(function () {
-            //         $('ul').children().each(function () {
-            //         $(this).css('font-weight', 'bold')
-            //
-            //         })
-            //
-            //     });
-            //
-            // });
-
             $('h3').click(function () {
-                    $(this).next().children().css('font-weight', 'bold')
+                    $(this).next().children().css('font-weight', 'bold');
             });
 
+<!--========== FUNCTION FOR MAKING FIRST LI BLUE==========-->
+
+            $('li').click(function () {
+               $(this).parent().children().first().css('color', 'blue');
+            });
 
 
         $(function () {
