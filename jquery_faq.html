@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Attribut Method Exercise</title>
+    <title>Attribute Method Exercise</title>
     <style>
         .invisible {
             display: none
@@ -11,36 +11,76 @@
 </head>
 <body>
 
-    <h1>Attribute Method Exercise</h1>
+    <h1>National Park Facts</h1>
         <dl>
             <lh>Facts About Our National Parks</lh>
-                <dt>Yellowstone National Park
-                    <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
-                        was founded in 1916 when President Woodrow Wilson signed the Organic Act. However,
-                        the first national park was created many years earlier, when Congress passed an act
-                        establishing Yellowstone National Park in 1872.
-                <dt>Great Smoky Mountains</dt>
-                    <dd class="invisible">Most visited national park, drawing more than 10 million recreational visits each year.
-                <dt>Crater Lake National Park
-                    <dd class="invisible">Home to America’s deepest lake. It’s 1,943 feet deep, enough to hide 1.5 Empire State Buildings, and holds 4.6 trillion gallons of water.
-                <dt>Term
-                    <dd class="invisible">definition
-                <dt>Term
-                    <dd class="invisible">definition
-                <dt>Term
-                    <dd class="invisible">definition
-                <dt>Term
-                    <dd class="invisible">definition
-                <dt>Term
-                    <dd class="invisible">definition
-                <dt>Term
-                    <dd class="invisible">definition
-                <dt>Term
-                    <dd class="invisible">definition
+            <dt>Yellowstone National Park</dt>
+                <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
+                    was founded in 1916 when President Woodrow Wilson signed the Organic Act. However, the first
+                    national park was created many years earlier, when Congress passed an act establishing Yellowstone
+                    National Park in 1872.</dd>
+                    <dt>Great Smoky Mountains</dt>
+                <dd class="invisible">Most visited national park, drawing more than 10 million recreational visits
+                    each year.</dd>
+                    <dt>Crater Lake National Park
+                <dd class="invisible">Home to America’s deepest lake. It’s 1,943 feet deep, enough to hide 1.5 Empire
+                    State Buildings, and holds 4.6 trillion gallons of water.</dd>
+                    <dt>Term
+                <dd class="invisible">definition</dd>
+                    <dt>Term
+                <dd class="invisible">definition</dd>
+                    <dt>Term
+                <dd class="invisible">definition</dd>
+                    <dt>Term
+                <dd class="invisible">definition</dd>
+                    <dt>Term
+                <dd class="invisible">definition</dd>
+                    <dt>Term
+                <dd class="invisible">definition</dd>
+                    <dt>Term
+                <dd class="invisible">definition</dd>
         </dl>
-    <button id="answer-btn">Toggle Answers</button>
+        <button id="answer-btn">Toggle Answers</button>
+
+    <!--==============LISTS===================-->
+    <h3 id="arches">Arches National Park</h3>
+        <ul>
+            <li>President Wilson originally established the park as Sieur de Monts National Monument.</li>
+            <li>There are a total of 26 mountains in Acadia National Park.</li>
+            <li>The deepest lake in the park is Jordan Pond. It is 150 feet deep.</li>
+            <li>There used to be mountain lions and gray wolves in the park but they have since left the area.</li>
+        </ul>
+
+    <h3 id="carslbad">Carlsbad Caverns National Park</h3>
+        <ul>
+            <li>In 1903 mining began in Carlsbad Cavern for guano. The cave was known at the time as 'Bat Cave,' or
+                'Big Cave.'</li>
+            <li>There are more than 119 known caves in Carlsbad Caverns National Park.</li>
+            <li>There are microbes in Carlsbad Caverns that are found nowhere else on earth. Scientists are studying
+                some of the microbes in Lechuguilla Cave for the possibility that they may help to discover a cancer
+                cure.</li>
+            <li>There have been fossils and bones found in Carlsbad Caverns National Park dating from the ice age.
+                These include the bones from giant sloths, camels, lions, and jaguars.</li>
+        </ul>
+
+    <h3 id="mammoth">Mammoth Cave National Park</h3>
+        <ul>
+            <li>The caves system of Mammoth Cave National Park began to form more than 280 million years ago. The
+                earth rose and twisted and allowed water to erode the rock into the current cave system.</li>
+            <li>Visitors to Mammoth Cave National Park can take an underground boat tour in Lost River Cave. It is
+                believed that this cave offered shelter for Native Americans as far back as 8,000 years ago.</li>
+            <li>Visitors to the park can explore 31 miles of river (Nolin River, and Green River), by canoe.</li>
+            <li>There are twelve eyeless species of animals living in the caves of Mammoth Caves National Park.</li>
+        </ul>
 
 
+    <!--========== UL HIGHTLIGHTING BUTTON==========-->
+
+    <button id="hl-btn">Hightlight Button</button>
+
+
+
+<!--========== jQuery Script ==========-->
 
     <script src="js/jquery-2.2.4.min.js"></script>
     <script>
@@ -57,12 +97,34 @@
             // Bonus
 
             $('dt').click(function () {
-                $(this).css('background', 'yellow')
+                $(this).css('background', 'yellow');
             });
 
 
+<!--========== FUNCTION FOR UL HIGHTLIGHTING BUTTON==========-->
 
+            $('#hl-btn').click(function () {
+                $('ul').each(function () {
+                    $(this).children().last().css('background', 'yellow');
+                })
+            });
 
+<!--========== FUNCTION FOR LI BOLDING==========-->
+
+            // $('#arches').click(function () {
+            //     $(this).click(function () {
+            //         $('ul').children().each(function () {
+            //         $(this).css('font-weight', 'bold')
+            //
+            //         })
+            //
+            //     });
+            //
+            // });
+
+            $('h3').click(function () {
+                    $(this).next().children().css('font-weight', 'bold')
+            });
 
 
 
