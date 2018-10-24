@@ -2,47 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Attribute Method Exercise</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+        .column {
+        float: left;
+        width: 33%;
+        border: saddlebrown solid 10px;
+        margin: 2px;
+        }
+
         .invisible {
             display: none
         }
+
+        .row {
+        width:100%;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+
     </style>
+
 </head>
 <body>
 
-    <div>jlkfjlkajfdklja</div>
+    <h1 class="text-center">National Park Facts</h1>
 
-    <h1>National Park Facts</h1>
-        <dl>
-            <lh>Facts About Our National Parks</lh>
-            <dt>Yellowstone National Park</dt>
-                <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
-                    was founded in 1916 when President Woodrow Wilson signed the Organic Act. However, the first
-                    national park was created many years earlier, when Congress passed an act establishing Yellowstone
-                    National Park in 1872.</dd>
-                    <dt>Great Smoky Mountains</dt>
-                <dd class="invisible">Most visited national park, drawing more than 10 million recreational visits
-                    each year.</dd>
-                    <dt>Crater Lake National Park
-                <dd class="invisible">Home to America’s deepest lake. It’s 1,943 feet deep, enough to hide 1.5 Empire
-                    State Buildings, and holds 4.6 trillion gallons of water.</dd>
-                    <dt>Term
-                <dd class="invisible">definition</dd>
-                    <dt>Term
-                <dd class="invisible">definition</dd>
-                    <dt>Term
-                <dd class="invisible">definition</dd>
-                    <dt>Term
-                <dd class="invisible">definition</dd>
-                    <dt>Term
-                <dd class="invisible">definition</dd>
-                    <dt>Term
-                <dd class="invisible">definition</dd>
-                    <dt>Term
-                <dd class="invisible">definition</dd>
-        </dl>
-        <button id="answer-btn">Toggle Answers</button>
+<!--========================== IMAGES / BUTTONS ================================-->
+
+        <div class="row">
+            <div class="column">
+                <img src="img/img_snow.jpg" alt="snow" style="width:100%">
+            </div>
+                <button id="img-btn-1">Hightlight Button</button>
+
+
+            <div class="column">
+                <img src="img/img_forest.jpg" alt="forest" style="width:100%">
+            </div>
+            <button id="img-btn-2">Hightlight Button</button>
+
+
+            <div class="column">
+                <img src="img/img_mountains.jpg" alt="mountains" style="width:100%">
+            </div>
+                <button id="img-btn-3">Hightlight Button</button>
+        </div>
+
+
+            <dl>
+                <dt>Yellowstone National Park</dt>
+                    <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
+                        was founded in 1916 when President Woodrow Wilson signed the Organic Act. However, the first
+                        national park was created many years earlier, when Congress passed an act establishing Yellowstone
+                        National Park in 1872.
+                    </dd>
+                <dt>Great Smoky Mountains</dt>
+                    <dd class="invisible">Most visited national park, drawing more than 10 million recreational visits
+                        each year.
+                    </dd>
+                <dt>Crater Lake National Park
+                    <dd class="invisible">Home to America’s deepest lake. It’s 1,943 feet deep, enough to hide 1.5 Empire
+                        State Buildings, and holds 4.6 trillion gallons of water.
+                    </dd>
+                <dt>Term
+                    <dd class="invisible">definition</dd>
+                <dt>Term
+                    <dd class="invisible">definition</dd>
+                <dt>Term
+                    <dd class="invisible">definition</dd>
+                <dt>Term
+                    <dd class="invisible">definition</dd>
+                <dt>Term
+                    <dd class="invisible">definition</dd>
+                <dt>Term
+                    <dd class="invisible">definition</dd>
+                <dt>Term
+                    <dd class="invisible">definition</dd>
+            </dl>
+            <button id="answer-btn">Toggle Answers</button>
+        <br><br><br>
 
     <!--==============LISTS===================-->
     <h3>Arches National Park</h3>
