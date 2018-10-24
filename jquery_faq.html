@@ -18,6 +18,7 @@
         .img1 {
             background-image: url("img/img_snow.jpg");
             float: left;
+            /*position: static;*/
             height: 400px;
             width: 525px;
             border: saddlebrown solid 10px;
@@ -27,6 +28,7 @@
         .img2 {
             background-image: url("img/img_forest.jpg");
             float: left;
+            /*position: static;*/
             height: 400px;
             width: 525px;
             border: saddlebrown solid 10px;
@@ -36,6 +38,7 @@
         .img3 {
             background-image: url("img/img_mountains.jpg");
             float: left;
+            /*position: static;*/
             height: 400px;
             width: 525px;
             border: saddlebrown solid 10px;
@@ -96,26 +99,10 @@
 
     <h1 class="text-center">National Park Facts</h1>
 
+
 <!--========================== IMAGES / BUTTONS ================================-->
 
-        <!--<div class="row">-->
-            <!--<div class="column">-->
-                <!--<img src="img/img_snow.jpg" alt="snow" style="width:100%">-->
-            <!--</div>-->
-                <!--<button id="img-btn-1">Hightlight Button</button>-->
 
-
-            <!--<div class="column">-->
-                <!--<img src="img/img_forest.jpg" alt="forest" style="width:100%">-->
-            <!--</div>-->
-            <!--<button id="img-btn-2">Hightlight Button</button>-->
-
-
-            <!--<div class="column">-->
-                <!--<img src="img/img_mountains.jpg" alt="mountains" style="width:100%">-->
-            <!--</div>-->
-                <!--<button id="img-btn-3">Hightlight Button</button>-->
-        <!--</div>-->
 <!--=======IMAGE DIVS============-->
 
     <div>
@@ -130,6 +117,17 @@
         <div id="img-btn-2">Swap</div>
         <div id="img-btn-3">Swap</div>
     </div>
+
+<!--=======================EFFECTS EXERCISE=========================-->
+
+    <div id="news-letter">
+        <h1>Would you like to sign up for our newsletter? <span>X</span></h1>
+    </div>
+
+    <h2 id='register-alert' class="invisible">In order to continue, please register for free!</h2>
+
+
+
             <dl>
                 <dt>Yellowstone National Park</dt>
                     <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
@@ -165,7 +163,7 @@
 
     <!--==============LISTS===================-->
     <h3>Arches National Park</h3>
-        <ul>
+        <ul class="invisible">
             <li>President Wilson originally established the park as Sieur de Monts National Monument.</li>
             <li>There are a total of 26 mountains in Acadia National Park.</li>
             <li>The deepest lake in the park is Jordan Pond. It is 150 feet deep.</li>
@@ -173,7 +171,7 @@
         </ul>
 
     <h3>Carlsbad Caverns National Park</h3>
-        <ul>
+        <ul class="invisible">
             <li>In 1903 mining began in Carlsbad Cavern for guano. The cave was known at the time as 'Bat Cave,' or
                 'Big Cave.'</li>
             <li>There are more than 119 known caves in Carlsbad Caverns National Park.</li>
@@ -185,7 +183,7 @@
         </ul>
 
     <h3>Mammoth Cave National Park</h3>
-        <ul>
+        <ul class="invisible">
             <li>The caves system of Mammoth Cave National Park began to form more than 280 million years ago. The
                 earth rose and twisted and allowed water to erode the rock into the current cave system.</li>
             <li>Visitors to Mammoth Cave National Park can take an underground boat tour in Lost River Cave. It is
@@ -208,6 +206,32 @@
 
         $(document).ready(function () {
             "use strict";
+
+//================EFFECTS SCRIPT=====================
+            // 1.
+            $('span').click(function () {
+                $('#news-letter').hide();
+            });
+
+
+
+
+
+            // 2.
+            $('h3').click(function () {
+               $(this).next().slideToggle();
+            });
+
+            // 3.
+
+
+            setTimeout(function () {
+                $('#register-alert').fadeIn();
+            }, 8000);
+
+
+
+
 //==================== IMAGES ============================
 
             var imageRow = $('div').first().addClass('row');
