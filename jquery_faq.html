@@ -2,51 +2,247 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Attribut Method Exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Attribute Method Exercise</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .img1 {
+            background-image: url("img/img_snow.jpg");
+            float: left;
+            height: 400px;
+            width: 525px;
+            border: saddlebrown solid 10px;
+            margin: 2px;
+        }
+
+        .img2 {
+            background-image: url("img/img_forest.jpg");
+            float: left;
+            height: 400px;
+            width: 525px;
+            border: saddlebrown solid 10px;
+            margin: 2px;
+        }
+
+        .img3 {
+            background-image: url("img/img_mountains.jpg");
+            float: left;
+            height: 400px;
+            width: 525px;
+            border: saddlebrown solid 10px;
+            margin: 2px;
+        }
+
+        .img-btn {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            margin: 0px 200px 0px 200px;
+            box-shadow: 0 9px #999;
+        }
+
+        .img-btn:hover {background-color: #3e8e41}
+
+        .img-btn:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        /*.column {*/
+        /*float: left;*/
+        /*width: 33%;*/
+        /*border: saddlebrown solid 10px;*/
+        /*margin: 2px;*/
+        /*}*/
+
         .invisible {
             display: none
         }
+
+        .row {
+            width:100%;
+            padding: 30px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+
     </style>
+
 </head>
 <body>
 
-    <h1>Attribute Method Exercise</h1>
-        <dl>
-            <lh>Facts About Our National Parks</lh>
-                <dt>Yellowstone National Park
+    <h1 class="text-center">National Park Facts</h1>
+
+<!--========================== IMAGES / BUTTONS ================================-->
+
+        <!--<div class="row">-->
+            <!--<div class="column">-->
+                <!--<img src="img/img_snow.jpg" alt="snow" style="width:100%">-->
+            <!--</div>-->
+                <!--<button id="img-btn-1">Hightlight Button</button>-->
+
+
+            <!--<div class="column">-->
+                <!--<img src="img/img_forest.jpg" alt="forest" style="width:100%">-->
+            <!--</div>-->
+            <!--<button id="img-btn-2">Hightlight Button</button>-->
+
+
+            <!--<div class="column">-->
+                <!--<img src="img/img_mountains.jpg" alt="mountains" style="width:100%">-->
+            <!--</div>-->
+                <!--<button id="img-btn-3">Hightlight Button</button>-->
+        <!--</div>-->
+<!--=======IMAGE DIVS============-->
+
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+<!--=====IMAGE BTNS DIVS=====-->
+    <div>
+        <div id="img-btn-1">Swap</div>
+        <div id="img-btn-2">Swap</div>
+        <div id="img-btn-3">Swap</div>
+    </div>
+            <dl>
+                <dt>Yellowstone National Park</dt>
                     <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
-                        was founded in 1916 when President Woodrow Wilson signed the Organic Act. However,
-                        the first national park was created many years earlier, when Congress passed an act
-                        establishing Yellowstone National Park in 1872.
+                        was founded in 1916 when President Woodrow Wilson signed the Organic Act. However, the first
+                        national park was created many years earlier, when Congress passed an act establishing Yellowstone
+                        National Park in 1872.
+                    </dd>
                 <dt>Great Smoky Mountains</dt>
-                    <dd class="invisible">Most visited national park, drawing more than 10 million recreational visits each year.
+                    <dd class="invisible">Most visited national park, drawing more than 10 million recreational visits
+                        each year.
+                    </dd>
                 <dt>Crater Lake National Park
-                    <dd class="invisible">Home to America’s deepest lake. It’s 1,943 feet deep, enough to hide 1.5 Empire State Buildings, and holds 4.6 trillion gallons of water.
+                    <dd class="invisible">Home to America’s deepest lake. It’s 1,943 feet deep, enough to hide 1.5 Empire
+                        State Buildings, and holds 4.6 trillion gallons of water.
+                    </dd>
                 <dt>Term
-                    <dd class="invisible">definition
+                    <dd class="invisible">definition</dd>
                 <dt>Term
-                    <dd class="invisible">definition
+                    <dd class="invisible">definition</dd>
                 <dt>Term
-                    <dd class="invisible">definition
+                    <dd class="invisible">definition</dd>
                 <dt>Term
-                    <dd class="invisible">definition
+                    <dd class="invisible">definition</dd>
                 <dt>Term
-                    <dd class="invisible">definition
+                    <dd class="invisible">definition</dd>
                 <dt>Term
-                    <dd class="invisible">definition
+                    <dd class="invisible">definition</dd>
                 <dt>Term
-                    <dd class="invisible">definition
-        </dl>
-    <button id="answer-btn">Toggle Answers</button>
+                    <dd class="invisible">definition</dd>
+            </dl>
+            <button id="answer-btn">Toggle Answers</button>
+        <br><br><br>
+
+    <!--==============LISTS===================-->
+    <h3>Arches National Park</h3>
+        <ul>
+            <li>President Wilson originally established the park as Sieur de Monts National Monument.</li>
+            <li>There are a total of 26 mountains in Acadia National Park.</li>
+            <li>The deepest lake in the park is Jordan Pond. It is 150 feet deep.</li>
+            <li>There used to be mountain lions and gray wolves in the park but they have since left the area.</li>
+        </ul>
+
+    <h3>Carlsbad Caverns National Park</h3>
+        <ul>
+            <li>In 1903 mining began in Carlsbad Cavern for guano. The cave was known at the time as 'Bat Cave,' or
+                'Big Cave.'</li>
+            <li>There are more than 119 known caves in Carlsbad Caverns National Park.</li>
+            <li>There are microbes in Carlsbad Caverns that are found nowhere else on earth. Scientists are studying
+                some of the microbes in Lechuguilla Cave for the possibility that they may help to discover a cancer
+                cure.</li>
+            <li>There have been fossils and bones found in Carlsbad Caverns National Park dating from the ice age.
+                These include the bones from giant sloths, camels, lions, and jaguars.</li>
+        </ul>
+
+    <h3>Mammoth Cave National Park</h3>
+        <ul>
+            <li>The caves system of Mammoth Cave National Park began to form more than 280 million years ago. The
+                earth rose and twisted and allowed water to erode the rock into the current cave system.</li>
+            <li>Visitors to Mammoth Cave National Park can take an underground boat tour in Lost River Cave. It is
+                believed that this cave offered shelter for Native Americans as far back as 8,000 years ago.</li>
+            <li>Visitors to the park can explore 31 miles of river (Nolin River, and Green River), by canoe.</li>
+            <li>There are twelve eyeless species of animals living in the caves of Mammoth Caves National Park.</li>
+        </ul>
 
 
+    <!--========== UL HIGHTLIGHTING BUTTON==========-->
+
+    <button id="hl-btn">Hightlight Button</button>
+
+
+
+<!--========== jQuery Script ==========-->
 
     <script src="js/jquery-2.2.4.min.js"></script>
     <script>
 
         $(document).ready(function () {
             "use strict";
+//==================== IMAGES ============================
+
+            var imageRow = $('div').first().addClass('row');
+            var imageOne = $('div').children().first().addClass('img1');
+            var imageTwo = $('div').children().first().next().addClass('img2');
+            var imageThree = $('div').children().first().next().next().addClass('img3');
+
+            var btnRow = $('div').first().next().addClass('row');
+            var btnImageOne = $('#img-btn-1').addClass('img-btn');
+            var btnImageTwo = $('#img-btn-2').addClass('img-btn');
+            var btnImageThree = $('#img-btn-3').addClass('img-btn');
+
+            //Toggling 2 classes
+            //https://stackoverflow.com/questions/7002039/easiest-way-to-toggle-2-classes-in-jquery
+            $(btnImageOne).click(function () {
+                
+                $(imageOne, imageTwo).toggleClass('img1 img2');
+                $(imageTwo, imageOne).toggleClass('img2 img1');
+            });
+
+
+
+
+
+            $(btnImageThree).click(function () {
+                $(imageThree, imageTwo).toggleClass('img3 img2');
+                $(imageTwo, imageThree).toggleClass('img2 img3');
+            });
+
+
+
+
+
+//==================== TOGGLE INVISIBLE BTN FUNCTION ======================
+
 
             $('#answer-btn').click(function () {
                 $('dd').toggleClass('invisible');
@@ -57,21 +253,30 @@
             // Bonus
 
             $('dt').click(function () {
-                $(this).css('background', 'yellow')
+                $(this).css('background', 'yellow');
             });
 
 
+<!--========== FUNCTION FOR UL HIGHTLIGHTING BUTTON==========-->
 
+            $('#hl-btn').click(function () {
+                $('ul').each(function () {
+                    $(this).children().last().css('background', 'yellow');
+                })
+            });
 
+<!--========== FUNCTION FOR LI BOLDING==========-->
 
+            $('h3').click(function () {
+                    $(this).next().children().css('font-weight', 'bold');
+            });
 
+<!--========== FUNCTION FOR MAKING FIRST LI BLUE==========-->
 
-        $(function () {
+            $('li').click(function () {
+               $(this).parent().children().first().css('color', 'blue');
+            });
 
-        $('invisible').css('display', 'none');
-
-
-        });
 
         });
 
