@@ -1,4 +1,4 @@
-
+(function () {
 "use strict";
 
 // ================================= WARM UP
@@ -119,4 +119,4 @@ $('#add-names-btn').click(function() {
 
 
 
-// });
+})();
