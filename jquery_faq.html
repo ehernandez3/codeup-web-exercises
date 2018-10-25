@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Attribute Method Exercise</title>
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
 
         * {
@@ -75,20 +75,20 @@
         /*margin: 2px;*/
         /*}*/
 
-        .invisible {
-            display: none
-        }
+        /*.invisible {*/
+            /*display: none*/
+        /*}*/
 
-        .row {
-            width:100%;
-            padding: 30px;
-        }
+        /*.row {*/
+            /*width:100%;*/
+            /*padding: 30px;*/
+        /*}*/
 
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
+        /*.row::after {*/
+            /*content: "";*/
+            /*clear: both;*/
+            /*display: table;*/
+        /*}*/
 
 
 
@@ -96,7 +96,7 @@
 
 </head>
 <body>
-
+<section class="container-fluid mt-5 ">
     <h1 class="text-center">National Park Facts</h1>
 
 
@@ -105,7 +105,7 @@
 
 <!--=======IMAGE DIVS============-->
 
-    <div>
+    <div class="ml-4">
         <div></div>
         <div></div>
         <div></div>
@@ -124,11 +124,11 @@
         <h1>Would you like to sign up for our newsletter? <span>X</span></h1>
     </div>
 
-    <h2 id='register-alert' class="invisible">In order to continue, please register for free!</h2>
+    <h2 id='register-alert' class="text-center">In order to continue, please register for free!</h2>
 
 
 
-            <dl>
+            <dl class="mt-5">
                 <dt>Yellowstone National Park</dt>
                     <dd class="invisible">The U.S. National Park Service, the bureau responsible for protecting our parks,
                         was founded in 1916 when President Woodrow Wilson signed the Organic Act. However, the first
@@ -163,7 +163,7 @@
 
     <!--==============LISTS===================-->
     <h3>Arches National Park</h3>
-        <ul class="invisible">
+        <ul>
             <li>President Wilson originally established the park as Sieur de Monts National Monument.</li>
             <li>There are a total of 26 mountains in Acadia National Park.</li>
             <li>The deepest lake in the park is Jordan Pond. It is 150 feet deep.</li>
@@ -171,7 +171,7 @@
         </ul>
 
     <h3>Carlsbad Caverns National Park</h3>
-        <ul class="invisible">
+        <ul>
             <li>In 1903 mining began in Carlsbad Cavern for guano. The cave was known at the time as 'Bat Cave,' or
                 'Big Cave.'</li>
             <li>There are more than 119 known caves in Carlsbad Caverns National Park.</li>
@@ -183,7 +183,7 @@
         </ul>
 
     <h3>Mammoth Cave National Park</h3>
-        <ul class="invisible">
+        <ul>
             <li>The caves system of Mammoth Cave National Park began to form more than 280 million years ago. The
                 earth rose and twisted and allowed water to erode the rock into the current cave system.</li>
             <li>Visitors to Mammoth Cave National Park can take an underground boat tour in Lost River Cave. It is
@@ -196,12 +196,14 @@
     <!--========== UL HIGHTLIGHTING BUTTON==========-->
 
     <button id="hl-btn">Hightlight Button</button>
-
+</section>
 
 
 <!--========== jQuery Script ==========-->
 
     <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
 
         $(document).ready(function () {
@@ -218,16 +220,15 @@
 
 
             // 2.
+
+            $('ul').hide()
             $('h3').click(function () {
                $(this).next().slideToggle();
             });
 
             // 3.
 
-
-            setTimeout(function () {
-                $('#register-alert').fadeIn();
-            }, 8000);
+            $('#register-alert').hide().delay(8000).fadeIn();
 
 
 
@@ -244,24 +245,52 @@
             var btnImageTwo = $('#img-btn-2').addClass('img-btn');
             var btnImageThree = $('#img-btn-3').addClass('img-btn');
 
+
+
             //Toggling 2 classes
             //https://stackoverflow.com/questions/7002039/easiest-way-to-toggle-2-classes-in-jquery
+
+
             $(btnImageOne).click(function () {
-                
-                $(imageOne, imageTwo).toggleClass('img1 img2');
-                $(imageTwo, imageOne).toggleClass('img2 img1');
+                var currentClass = $(imageOne).attr('class');
+                var neighborClass = $(imageTwo).attr('class');
+                $(imageOne).removeClass(currentClass).addClass(neighborClass);
+                $(imageTwo).removeClass(neighborClass).addClass(currentClass);
             });
-
-
-
 
 
             $(btnImageThree).click(function () {
-                $(imageThree, imageTwo).toggleClass('img3 img2');
-                $(imageTwo, imageThree).toggleClass('img2 img3');
+                var currentClass = $(imageTwo).attr('class');
+                var neighborClassRight = $(imageOne).attr('class');
+                var neighborClassLeft = $(imageThree).attr('class');
+                var randomClass = Math.random() < 0.5 ? 1 : 2;
+
+
             });
 
 
+            $(btnImageThree).click(function () {
+                var currentClass = $(imageThree).attr('class');
+                var neighborClass = $(imageTwo).attr('class');
+                $(imageThree).removeClass(currentClass).addClass(neighborClass);
+                $(imageTwo).removeClass(neighborClass).addClass(currentClass);
+            });
+
+
+
+            // $(btnImageThree).click(function () {
+            //     $(imageThree, imageTwo).toggleClass('img3 img2');
+            //     $(imageTwo, imageThree).toggleClass('img2 img3');
+            // });
+
+
+
+            // $('.firstButton').click(function() {
+            //     var currentClass = $('div').children().first().attr('class');
+            //     var neighborClass = $('div').children().first().next().attr('class');
+            //     $('div').children().first().removeClass(currentClass).addClass(neighborClass);
+            //     $('div').children().first().next().removeClass(neighborClass).addClass(currentClass);
+            // });
 
 
 
