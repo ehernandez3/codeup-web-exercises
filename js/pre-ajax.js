@@ -57,32 +57,32 @@
         }
     ];
 //=======================================SOLUTION 1
-//     //when button clicked should do the following:
-//         //
-//     function buildHTML(peopleObjects) {
-//         var totalHTML = "<ul>";
-//
-//         // peopleObjects.forEach(function (person) { //========================= Option 1
-//         //     totalHTML += "<li>";
-//         //     totalHTML += person.name;
-//         //     totalHTML += "</li>";
-//         // });
-//
-//         for (var i = 0; i < peopleObjects.length; i += 1) { //================== Option 2
-//             totalHTML += "<li>";
-//             totalHTML += peopleObjects[i].name;
-//             totalHTML += "</li>";
-//         }
-//
-//         totalHTML += "</ul>"; //========================== Needed for both option 1 and 2
-//         return totalHTML;
-//
-//
-//     }
-//
-//     $('#add-names-btn').click(function () {
-//         $('#names-list').html(buildHTML(people)); // Use .html if using jQuery and .innerHTML if using DOM
-//     });
+    //when button clicked should do the following:
+        //
+    function buildHTML(peopleObjects) {
+        var totalHTML = "<ul>";
+
+        // peopleObjects.forEach(function (person) { //========================= Option 1
+        //     totalHTML += "<li>";
+        //     totalHTML += person.name;
+        //     totalHTML += "</li>";
+        // });
+
+        for (var i = 0; i < peopleObjects.length; i += 1) { //================== Option 2
+            totalHTML += "<li>";
+            totalHTML += peopleObjects[i].name;
+            totalHTML += "</li>";
+        }
+
+        totalHTML += "</ul>"; //========================== Needed for both option 1 and 2
+        return totalHTML;
+
+
+    }
+
+    $('#add-names-btn').click(function () {
+        $('#names-list').html(buildHTML(people)); // Use .html if using jQuery and .innerHTML if using DOM
+    });
 
 
     //============================== BENNY'S SOLUTION
@@ -100,22 +100,22 @@
 
     //============================== DAVID'S SOLUTION w/ BONUS
 
-$('#add-names-btn').click(function() {
-    $('#names-list').html(function () {
-        var output = '<ul><li>';
-        people.forEach(function (person, index) {
-            if (index === (people.length - 1)) {
-                output += person.name + '</li></ul>';
-            } else {
-                output += person.name + '</li><li>';
-            }
-        });
-        return output;
-    });
-    $('li').each(function(i) {
-        $(this).css('color', people[i].favColor);
-    });
-});
+// $('#add-names-btn').click(function() {
+//     $('#names-list').html(function () {
+//         var output = '<ul><li>';
+//         people.forEach(function (person, index) {
+//             if (index === (people.length - 1)) {
+//                 output += person.name + '</li></ul>';
+//             } else {
+//                 output += person.name + '</li><li>';
+//             }
+//         });
+//         return output;
+//     });
+//     $('li').each(function(i) {
+//         $(this).css('color', people[i].favColor);
+//     });
+// });
 
 
 

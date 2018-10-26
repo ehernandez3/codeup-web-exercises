@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+// (function() {
+    "use strict";
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+    // $.ajax("/some-url", {
+    //     type: "POST",
+    //     data: {
+    //         name:     "John",
+    //         location: "Boston"
+    //     }
+    // });
+
+    $.get("data/inventory.json", {
+                }).done(function (data) {
+                    data.forEach(function (tool) {
+                        $('#insertProducts').append('<tr></tr>');
+                        $('tr').last().append('<td>' + tool.title + '</td>');
+                        $('tr').last().append('<td>' + tool.quantity + '</td>');
+                        $('tr').last().append('<td>' + tool.price.toFixed(2) + '</td>');
+                        $('tr').last().append('<td>' + tool.categories.join(', ') + '</td>');
+                    })
+    });
+
+    // jqXhr.done(function(data, status, jqXhr) {
+    //     alert("Everything went great!");
+    // });
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+
+
+
+
+
+// peopleObjects.forEach(function (person) { //========================= Option 1
+//     totalHTML += "<li>";
+//     totalHTML += person.name;
+//     totalHTML += "</li>";
+// });
+
+// <table>
+//     <tr>
+//         <th>Product</th>
+//         <th>Price</th>
+//     </tr>
+//     <tr>
+//         <td>Iced Tea</td>
+//         <td>$2.99</td>
+//     </tr>
+//     <tr>
+//         <td>Hamburger and French Fries</td>
+//         <td>$11.99</td>
+//     </tr>
+// </table>
+
+
+// })();
+</script>
+
+</body>
+</html>
