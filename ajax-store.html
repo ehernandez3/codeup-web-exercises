@@ -19,10 +19,12 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="update">Refresh</button>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-// (function() {
+(function() {
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
 
@@ -34,16 +36,6 @@
     //     }
     // });
 
-    $.get("data/inventory.json", {
-                }).done(function (data) {
-                    data.forEach(function (tool) {
-                        $('#insertProducts').append('<tr></tr>');
-                        $('tr').last().append('<td>' + tool.title + '</td>');
-                        $('tr').last().append('<td>' + tool.quantity + '</td>');
-                        $('tr').last().append('<td>' + tool.price.toFixed(2) + '</td>');
-                        $('tr').last().append('<td>' + tool.categories.join(', ') + '</td>');
-                    })
-    });
 
     // jqXhr.done(function(data, status, jqXhr) {
     //     alert("Everything went great!");
@@ -54,33 +46,64 @@
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
+//=========================Justin's Solution
+
+    function updatePage() {
+        $.ajax("data/inventory.json").done(buildTable);
+
+    }
+
+    var buildTable = function(data) {
+      var html = "";
+        $('#insertProducts').empty();
+        data.forEach(function (tool) {
+           html += '<tr>' +
+            '<td>' + tool.title + '</td>'+
+            '<td>' + tool.quantity + '</td>' +
+            '<td>' + tool.price.toFixed(2) + '</td>' +
+            '<td>' + tool.categories.join(', ') + '</td>' +
+       '</tr>'
+        });
+        $('#insertProducts').append(html)
+    };
+
+    $('#update').click(updatePage);
+
+//     title
+//     quantity
+//     price
+//     categories
+
+
+
+    // function buildHTML(orders) {
+    //     var ordersHTML = "";
+    //
+    //     orders.forEach(function (order) {
+    //         ordersHTML += "<section>";
+    //         ordersHTML += "<h3>" +
+    //     })
+    // }
+
+
+
+    //  //================David's Solution
+    // $.get("data/inventory.json", {
+    //             }).done(function (data) {
+    //                 data.forEach(function (tool) {
+    //                     $('#insertProducts').append('<tr></tr>');
+    //                     $('tr').last().append('<td>' + tool.title + '</td>');
+    //                     $('tr').last().append('<td>' + tool.quantity + '</td>');
+    //                     $('tr').last().append('<td>' + tool.price.toFixed(2) + '</td>');
+    //                     $('tr').last().append('<td>' + tool.categories.join(', ') + '</td>');
+    //                 })
+    // });
 
 
 
 
-// peopleObjects.forEach(function (person) { //========================= Option 1
-//     totalHTML += "<li>";
-//     totalHTML += person.name;
-//     totalHTML += "</li>";
-// });
 
-// <table>
-//     <tr>
-//         <th>Product</th>
-//         <th>Price</th>
-//     </tr>
-//     <tr>
-//         <td>Iced Tea</td>
-//         <td>$2.99</td>
-//     </tr>
-//     <tr>
-//         <td>Hamburger and French Fries</td>
-//         <td>$11.99</td>
-//     </tr>
-// </table>
-
-
-// })();
+})();
 </script>
 
 </body>
