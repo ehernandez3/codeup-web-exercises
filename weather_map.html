@@ -43,7 +43,7 @@
     <div id="main-container" class="container-fluid">
         <h1>Weather Application</h1>
         <h3>San Antonio</h3>
-        <div class="flex-container">
+        <div id="weatherForecast" class="flex-container">
             <div id="day1" class="flex-item float-left weather-card"></div><br><br>
             <div id="day2" class="flex-item float-left weather-card"></div>
             <div id="day3" class="flex-item float-left weather-card"></div>
@@ -70,13 +70,21 @@
     // console.log the humidity of the 2nd day
 
     // console.log the humidity of all the days (use a for loop)
+
     // console.log the temperature of the 3rd day in celsius
+
     // console.log the temperature of the 3rd day in Fahrenheit
+
     // console.log all types of information you will ultimately display for a single day in the 3-day forecast div
+
     // console.log all type of information you will ultimately display for all days in the 3-day forecast divs
+
     // write html and css to make/style a three-day forecast set of divs (may use design from curriculum)
+
     // create a function to append specific parts of the OpenWeatherMap map object to the DOM and call it in the .done() of the OpenWeatherMap map GET request.
+
     // remember to first console.log specific data from the OpenWeatherMap object, then work on adding to the DOM
+
     // read and reread the curriculum and OpenWeatherMap docs carefully on how to get an image of the weather forecast
     // hint: "http://openweathermap.org/img/w/" + whateverTheWeatherIconValueIs
     // verify that the OpenWeatherMap data populates by hard coding in lat and lon values
@@ -90,19 +98,97 @@
     // WIRE UP MAP TO WEATHER API
     // add the function call that makes the Weather API request to the marker drag event and pass in the lat and lon values of the marker to the Weather API request function
 
+        //================== BONUS
+        // - allow the user to search by place name, then move the map to that location and update the weather (will
+        // need to make a geocoding request, then use the results of the geocoding request in a call to the open weather
+        // api)
+
+        // - allow users to specify how many days they want a forecast for (e.g. users can specify if they want just
+        // today’s weather, a 2-day forecast, a 3-day forecast, a 5-day forecast etc.)
+
+        // - use a google maps info window to display the current weather conditions above the marker for the place
+        // - allow users to choose how much detail they want in their forecast (just the high and low for the day? do
+        // they also want to see an icon? wind speed, humidity, etc)
+
+        // - when a geocoding request is made, google responds with a list of places (starting with the closest match).
+        // When the user searches for a location, show them all the results for that location in a `select` element,
+        // and when they change the `select`, update the map and the displayed weather accordingly
 
 
-    var $api = $.get("http://api.openweathermap.org/data/2.5/forecast", {
+
+
+        const getMinMaxDayTemp = (data, day) => {
+            const temps = data.list.slice(day * 8 - 8, day * 8)
+                .reduce((prev, curr) => {
+                prev.push(curr.main.temp);
+            return prev;
+        }, []).sort();
+            return {min: temps.shift(), max: temps.pop()};
+        };
+
+
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "7c22c0eff2635e7030545daf35a8c048",
             q:     "San Antonio, US",
             units: "imperial" //Fahrenheit
             // units: "imperial" //Fahrenheit
 
-        }).done(function (data) {
+        }).done(function(data) {
+
         console.log(data); // All Data
-        console.log(data.list[0].main.temp); // Current Temperature
-        console.log(data.list[8].main.temp); //
-    });
+        // console.log(data.list[0].main.temp); // Current Temperature
+        // console.log(data.list[8].main.temp); //
+        // console.log(getMinMaxDayTemp(data, 1)); // Min Max Temp for day specified (day 1)
+            $('#weatherForecast').html(threeDayForecast(data));
+
+
+        });
+
+
+
+
+        function threeDayForecast(data) {
+            var html = "";
+
+            for(var i = 1, y = 0; i <= 3, y <= 2 ; i += 1, y += 1) {
+                html += "<div class='flex-item float-left weather-card text-center'>";
+                html += "<div><span class='font-weight-bold'>" + getMinMaxDayTemp(data,i).max.toFixed(0);
+                html += "/" + getMinMaxDayTemp(data,i).min.toFixed(0) + "</span></div>";
+                html += "<div><span class='font-weight-bold'>Clouds:</span> ";
+                html +=  data.list[y].weather[0].description + "</div>";
+                html += "<div><span class='font-weight-bold'>Humidity:</span> " + data.list[y].main.humidity + "</div>";
+                html += "<div><span class='font-weight-bold'>Wind: </span>" + "</div>";
+                html += "<div><span class='font-weight-bold'>Pressure: " + "</span></div>";
+                html += "</div>"
+            }
+            return html;
+        }
+
+
+        // function dayOneForecast(data) {
+        //     var html = "";
+        //     html += "<strong>" + getMinMaxDayTemp(data,1).max.toFixed(0) + "/" + getMinMaxDayTemp(data,1).min.toFixed(0) + "</strong><br>";
+        //
+        //
+        //     html += "<strong>Clouds:</strong> " + data.list[0].weather[0].description + "<br>";
+        //     html += "<strong>Humidity:</strong> " + data.list[0].main.humidity + "<br>";
+        //     html +="<strong>Wind:</strong> " + "<br>";
+        //     html +="<strong>Pressure:</strong> ";
+        //     $('#day1').append(html);
+        // }
+
+
+
+    //     $('#day1').html(function forcast(dataDay1) {
+    //     var html = "";
+    //     html += getMinMaxDayTemp(data, 1);
+    //
+    // });
+
+
+                
+
+
 
 
 
