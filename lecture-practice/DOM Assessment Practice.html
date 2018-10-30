@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .red {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>This is a Title</h1>
+    </section>
+
+    <section>
+        <ol>
+            <li>The</li>
+            <li>First</li> <!-- Make this blue-->
+            <li>List</li>
+        </ol>
+        <button id="hideList">Click</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur cumque debitis, dicta eaque eveniet exercitationem laudantium magnam minima nostrum officia repudiandae tempore, unde. A eum impedit minus non officia?</p>
+
+    </section>
+
+    <section>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus provident quaerat voluptatem. Consectetur consequatur consequuntur deserunt dignissimos esse eum facilis, iste magnam molestiae, mollitia officia omnis quasi quisquam reprehenderit rerum, unde vitae. Autem deserunt doloribus harum, maxime minima numquam, optio pariatur placeat ratione reprehenderit sapiente sequi similique, suscipit tempora voluptate.</p>
+        <ol>
+            <li>The</li>
+            <li>Second</li> <!-- Make this red-->
+            <li>List</li>
+        </ol>
+        <button id="hideList2">Click</button>
+    </section>
+    <section>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, necessitatibus!</p>
+
+    </section>
+
+    <ul>
+        <li>Dog</li>
+        <li>Cat</li>
+        <li>Fish</li>
+    </ul>
+    <ul>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+    </ul>
+    <ul>
+        <li>Sam</li>
+        <li>Fred</li>
+        <li>Smith</li>
+    </ul>
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $ (function() {
+            "use strict";
+
+            $('h1').css('background', 'yellow');
+
+            $('h1').html('hello codeup');
+
+            // $('p').html('hello world');
+
+            $('ol').children().last().css('background', 'red');
+
+            $('p').click(function() {
+                $(this).parent().hide();
+            })
+
+            $('ul').hover(function(){
+                $(this).css('background', 'green');
+            },function(){
+                $(this).css('background', 'white');
+            })
+
+            $('p').eq(1).html('hello codeup');
+
+            $('#hideList').click(function () {
+                $('section')
+                    .first()
+                    .next()
+                    .children()
+                    .first()
+                    .children()
+                    .first()
+                    .next()
+                    .css('color', 'blue');
+
+            });
+
+            $('#hideList2').click(function () {
+                $('section')
+                    .eq(-2)
+                    .children()
+                    .first()
+                    .next()
+                    .children()
+                    .first()
+                    .next()
+                    // .toggleClass('red');
+                    .toggle();
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
