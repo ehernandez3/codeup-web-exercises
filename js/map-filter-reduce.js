@@ -67,12 +67,61 @@ const users = [
 
 // 5. Use reduce to get the longest email from the list of users.
 
-    let longestEmail = users.reduce((accumulator, user) => {
+    let longestEmail = users.reduce((prev, curr) => {
+        if(prev.length < curr.email.length) {
+            return curr.email
+        } else {
+            return prev;
+        }
 
-
-        return accumulator.length > user.email.length ? accumulator : user;
-    });
+    }, "");
 
     console.log(longestEmail);
 
 // 6. Use reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+
+
+    // //Option 1
+    // let initialValue = "";
+    // users.forEach(user => {
+    //     initialValue += user.name + "' ";
+    // });
+    //
+    // initialValue = initialValue.substring(0, initialValue.length - 2) + ".";
+    //
+    // console.log(initialValue);
+
+
+    let nameString = users.reduce((accumulator, user) => {
+        // return  accumulator + user.name + ", ";
+        return `${accumulator}${user.name}, `;
+    }, "");
+
+    nameString = nameString.substring(0, nameString.length - 2) + ".";
+
+    console.log(nameString);
+
+
+// Use .map to produce a new array of objects containing only the email and name
+    const contactInfo = users.map(({name, email}) => {
+        return {
+            name,
+            email,
+            employer: "Codeup"
+        }
+    });
+
+console.log(contactInfo);
+
+// Use reduce to get the unique list of languages from the list of users.
+    let languages = users.reduce((accumulator, user) => {
+        user.languages.map(language => {
+            accumulator.push(language)
+        });
+        return accumulator;
+    }, []);
+
+    languages = new Set(languages); // A value in the Set may only occur once (No duplicates)
+    languages = Array.from(languages);
+
+    console.log(languages);
