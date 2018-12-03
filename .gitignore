@@ -3,7 +3,7 @@ secret.txt
 /.idea/
 *.iml
 .idea/workspace.xml
-/lecture-enviroment/
-lecture-enviroment/
-/lecture-enviroment/*
-lecture-enviroment/*.*
+/lecture-practice/
+lecture-practice/
+/lecture-practice/*
+lecture-practice/*.*

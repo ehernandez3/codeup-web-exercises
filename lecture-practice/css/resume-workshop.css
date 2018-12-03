@@ -1,0 +1,51 @@
+body {
+    background-color: azure;
+}
+
+#main-container {
+    margin: 0 auto;
+    /*width: 80%;*/
+    max-width: 1200px;
+
+}
+
+#name-column {
+    color: white;
+}
+
+
+.column {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    /*background: rgb(225 225 225);*/
+    margin-bottom: 20px;
+}
+
+
+
+.column.one-half {
+    width: 50%;
+}
+.column.one-third {
+    /*width: 33.33%;*/
+    width: 300px;
+    background: steelblue;
+}
+
+.column.one-fourth {
+    width: 25%;
+}
+
+.column.one-sixth {
+
+}
+.column.one-eighth {
+    width: 12.5%;
+}
+
+.column.two-third {
+    /*width: 66.66%;*/
+    width: 900px;
+}
