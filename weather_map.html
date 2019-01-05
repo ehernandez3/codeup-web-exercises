@@ -12,18 +12,10 @@
         body {
             background-color: rgb(180 219 250);
         }
-        /*.flex-container {*/
-            /*display: flex;*/
-            /*justify-content: space-evenly;*/
-        /*}*/
 
         .flex-item {
             flex: 1;
             margin: 0px 10px 0px 10px;
-        }
-
-        #main-container {
-
         }
 
         #map-canvas {
@@ -39,10 +31,6 @@
             width: 450px;
 
         }
-        .weather-row {
-
-        }
-
 
     </style>
 
@@ -51,12 +39,11 @@
     <div id="main-container" class="container-fluid">
         <h1 class="ml-3">Weather Application</h1>
         <h3 class="ml-4">San Antonio</h3>
-        <!--<div id="weatherForecast" class="flex-container">-->
-        <div id="weatherForecast" class="flex-row d-flex justify-content-center">
-            <!--<div id="day1" class="flex-item float-left weather-card"></div><br><br>-->
-            <!--<div id="day2" class="flex-item float-left weather-card"></div>-->
-            <!--<div id="day3" class="flex-item float-left weather-card"></div>-->
-        </div>
+            <div id="weatherForecast" class="flex-row d-flex justify-content-center">
+            <!--Weather Card generated here via j-->
+            <!--Weather Card generated here via j-->
+            <!--Weather Card generated here via j-->
+            </div>
         <br>
 
 
@@ -189,7 +176,6 @@
             // Set the zoom level
                 zoom: 10.5,
 
-
             // This sets the center of the map at our location
                 center: {
                     lat:  29.4221,
@@ -200,32 +186,6 @@
 
             // Render the map
             var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-
-
-        // function dayOneForecast(data) {
-        //     var html = "";
-        //     html += "<strong>" + getMinMaxDayTemp(data,1).max.toFixed(0) + "/" + getMinMaxDayTemp(data,1).min.toFixed(0) + "</strong><br>";
-        //
-        //
-        //     html += "<strong>Clouds:</strong> " + data.list[0].weather[0].description + "<br>";
-        //     html += "<strong>Humidity:</strong> " + data.list[0].main.humidity + "<br>";
-        //     html +="<strong>Wind:</strong> " + "<br>";
-        //     html +="<strong>Pressure:</strong> ";
-        //     $('#day1').append(html);
-        // }
-
-
-
-    //     $('#day1').html(function forcast(dataDay1) {
-    //     var html = "";
-    //     html += getMinMaxDayTemp(data, 1);
-    //
-    // });
-
-
-                
-
 
 
 
