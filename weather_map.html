@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather Map</title>
-    <link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+    <!--<link rel="stylesheet" href="foundation-6.4.2-complete/css/foundation.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!--Custom CSS-->
     <style>
 
         body {
             background-color: rgb(180 219 250);
         }
-        .flex-container {
-            display: flex;
-            justify-content: space-evenly;
-        }
+        /*.flex-container {*/
+            /*display: flex;*/
+            /*justify-content: space-evenly;*/
+        /*}*/
 
         .flex-item {
             flex: 1;
@@ -48,17 +49,20 @@
 </head>
 <body>
     <div id="main-container" class="container-fluid">
-        <h1>Weather Application</h1>
-        <h3>San Antonio</h3>
-        <div id="weatherForecast" class="flex-container">
-            <div id="day1" class="flex-item float-left weather-card"></div><br><br>
-            <div id="day2" class="flex-item float-left weather-card"></div>
-            <div id="day3" class="flex-item float-left weather-card"></div>
+        <h1 class="ml-3">Weather Application</h1>
+        <h3 class="ml-4">San Antonio</h3>
+        <!--<div id="weatherForecast" class="flex-container">-->
+        <div id="weatherForecast" class="flex-row d-flex justify-content-center">
+            <!--<div id="day1" class="flex-item float-left weather-card"></div><br><br>-->
+            <!--<div id="day2" class="flex-item float-left weather-card"></div>-->
+            <!--<div id="day3" class="flex-item float-left weather-card"></div>-->
         </div>
+        <br>
 
 
         <!-- div to hold map -->
-        <div id="map-canvas" class="align-center"></div>
+        <!--<div id="map-canvas" class="align-center"></div>-->
+        <div id="map-canvas" class="flex-row d-flex justify-content-center rounded"></div>
 
 
     </div>
@@ -165,16 +169,16 @@
             var html = "";
 
             for(var i = 1, y = 0; i <= 3, y < 24 ; i += 1, y += 8) {
-                html += "<div class='flex-item float-left weather-card text-center'>";
+                html += "<div class='flex-item float-left weather-card text-center border border-dark rounded p-4'>";
                 html += "<div><h3><span class='font-weight-bold'>" + getMinMaxDayTemp(data,i).max.toFixed(0) + "&deg";
                 html += "/" + getMinMaxDayTemp(data,i).min.toFixed(0) + "&deg" + "</span></h3></div>";
-                html += "<div><img src='http://openweathermap.org/img/w/" + data.list[y].weather[0].icon + ".png" + "'></div>";
-                html += "<div><span class='font-weight-bold'>Clouds:</span> ";
+                html += "<div class='mt-2'><img src='http://openweathermap.org/img/w/" + data.list[y].weather[0].icon + ".png" + "'></div>";
+                html += "<div class='mt-2'><span class='font-weight-bold'>Clouds:</span> ";
                 html +=  data.list[y].weather[0].description + "</div>";
-                html += "<div><span class='font-weight-bold'>Humidity:</span> "+ data.list[y].main.humidity + "%</div>";
-                html += "<div><span class='font-weight-bold'>Wind:</span> " + data.list[y].wind.speed.toFixed(0);
+                html += "<div class='mt-2'><span class='font-weight-bold'>Humidity:</span> "+ data.list[y].main.humidity + "%</div>";
+                html += "<div class='mt-2'><span class='font-weight-bold'>Wind:</span> " + data.list[y].wind.speed.toFixed(0);
                 html += " mph</div>";
-                html += "<div><span class='font-weight-bold'>Pressure: " + data.list[y].main.pressure.toFixed(2);
+                html += "<div class='mt-2'><span class='font-weight-bold'>Pressure: " + data.list[y].main.pressure.toFixed(2);
                 html += "</span></div></div>"
             }
             return html;
@@ -183,7 +187,7 @@
     // Set our map options
             var mapOptions = {
             // Set the zoom level
-                zoom: 4.5,
+                zoom: 10.5,
 
 
             // This sets the center of the map at our location
